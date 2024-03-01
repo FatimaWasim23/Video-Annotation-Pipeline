@@ -27,10 +27,6 @@ The code is organized into several modular functions to enhance readability and 
     process_all_annotation_data:- Processes all annotation files in a specified directory.It retrieves a list of all CSV files in the directory.For each file it loads the annotations, processes them using process_annotations, and appends the result to a list (all_dfs) and then it concatenates all DataFrames in the list into a single DataFrame (result_df) using pd.concat and the result DataFrame is returned.
     main:- Orchestrates the entire pipeline.
 
-<<<<<<< HEAD
-python3 main.py
-=======
->>>>>>> b37d4a0b8fa8cec8d45621f003b587aeca415857
 
 1. Efficiency Considerations:
    
@@ -79,8 +75,4 @@ The code loads entire DataFrames into memory, which may become a limitation for 
 
 To run unit tests, use the following command:
 
-<<<<<<< HEAD
-python3 -m unittest unit_test_pipeline.py
-=======
     python3 -m unittest discover tests
->>>>>>> b37d4a0b8fa8cec8d45621f003b587aeca415857
