@@ -3,7 +3,7 @@
 
 # Overview
 
-This project provides a modularized pipeline for processing video annotations stored in CSV files. The pipeline loads annotation data, processes it, and outputs a DataFrame suitable in a way to divide the videos into specific phases.
+This project provides a modularized pipeline for processing video annotations stored in CSV files. The pipeline loads annotation data, processes it, and outputs a DataFrame suitable in a way to divide the videos into specific phases.The project processes video annotations stored in CSV files and transforms them into a structured DataFrame. The resulting DataFrame contains information about each (video, frame) tuple, including video,frame,phase and specified tag.
 
 How to Run
 
@@ -58,6 +58,8 @@ The code loads entire DataFrames into memory, which may become a limitation for 
 2. Iterative Processing Overhead: For very large datasets, the iterative processing approach may result in slower execution times compared to fully vectorized solutions.
 
 3. Memory Usage: The code might face memory issues when dealing with very large datasets. For such cases, additional optimizations may be needed.
+
+4. Parallel Processing: The code currently does not utilize parallel processing, which could be a consideration for further optimization.
 
 # Unit Tests
 
