@@ -9,7 +9,7 @@ How to Run
     Clone the repository:
 
 
-git clone https://github.com/yourusername/video-annotation-pipeline.git
+git clone https://github.com/FatimaWasim23/video-annotation-pipeline.git
 cd video-annotation-pipeline
 
     Install dependencies:
@@ -20,7 +20,7 @@ pip install -r requirements.txt
     Run the main script:
 
 
-python main.py
+python3 main.py
 
 # Code Structure
 
@@ -63,4 +63,4 @@ The code loads entire DataFrames into memory, which may become a limitation for 
 
 To run unit tests, use the following command:
 
-python -m unittest discover tests
+python3 -m unittest unit_test_pipeline.py
