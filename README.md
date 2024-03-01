@@ -15,11 +15,11 @@ How to Run
     pip install -r requirements.txt
 
     Run the main script:
-    python3 video_annotation_pipeline.py
+    python3 main.py
 
 # Code Structure
 
-The code is organized into several modular functions to enhance readability and maintainability. Key functions include:
+The code is organized into several modular functions to enhance readability and maintainability in the following mentioned way:
 
     load_csv_data:- Loads annotations from a CSV file into a DataFrame.This function takes a CSV file path as input and uses Pandas to read the CSV into a DataFrame(annotations_df).
     process_row_data:- Processes a single row of the annotations DataFrame.
