@@ -8,7 +8,7 @@ This project provides a modularized pipeline for processing video annotations st
 How to Run
 
     Clone the repository:
-    git clone https://github.com/yourusername/video-annotation-pipeline.git
+    git clone https://github.com/FatimaWasim23/video-annotation-pipeline.git
     cd video-annotation-pipeline
 
     Install dependencies:
