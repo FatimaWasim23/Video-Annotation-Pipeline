@@ -4,23 +4,18 @@
 # Overview
 
 This project provides a modularized pipeline for processing video annotations stored in CSV files. The pipeline loads annotation data, processes it, and outputs a DataFrame suitable in a way to divide the videos into specific phases.
+
 How to Run
 
     Clone the repository:
-
-
-git clone https://github.com/yourusername/video-annotation-pipeline.git
-cd video-annotation-pipeline
+    git clone https://github.com/yourusername/video-annotation-pipeline.git
+    cd video-annotation-pipeline
 
     Install dependencies:
-
-
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
     Run the main script:
-
-
-python3 main.py
+    python3 video_annotation_pipeline.py
 
 # Code Structure
 
@@ -58,14 +53,14 @@ The code loads entire DataFrames into memory, which may become a limitation for 
 
 # Limitations
 
-    Limited Error Handling: The code assumes well-formed CSV files and may not handle unexpected formats or errors robustly.
+1. Limited Error Handling: The code assumes well-formed CSV files and may not handle unexpected formats or errors robustly.
 
-    Iterative Processing Overhead: For very large datasets, the iterative processing approach may result in slower execution times compared to fully vectorized solutions.
+2. Iterative Processing Overhead: For very large datasets, the iterative processing approach may result in slower execution times compared to fully vectorized solutions.
 
-    Memory Usage: The code might face memory issues when dealing with very large datasets. For such cases, additional optimizations may be needed.
+3. Memory Usage: The code might face memory issues when dealing with very large datasets. For such cases, additional optimizations may be needed.
 
 # Unit Tests
 
 To run unit tests, use the following command:
 
-python -m unittest discover tests
+    python3 -m unittest discover tests
