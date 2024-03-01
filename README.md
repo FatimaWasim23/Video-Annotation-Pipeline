@@ -75,4 +75,4 @@ The code loads entire DataFrames into memory, which may become a limitation for 
 
 To run unit tests, use the following command:
 
-    python3 -m unittest discover tests
+    python -m unittest unit_tests_pipeline.py
