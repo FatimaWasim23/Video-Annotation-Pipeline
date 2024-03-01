@@ -28,11 +28,13 @@ The code is organized into several modular functions to enhance readability and 
     main:- Orchestrates the entire pipeline.
 
 
-Efficiency Considerations:
-        The code uses Pandas, a powerful library for handling large datasets efficiently.It iterates through the rows of the DataFrame using iterrows(), which is not the most efficient for large DataFrames but is reasonable for moderate-sized datasets. The use of pd.concat is efficient for combining DataFrames, and it uses ignore_index=True to reset the index in the final concatenated DataFrame.
+1. Efficiency Considerations:
+   
+The code uses Pandas, a powerful library for handling large datasets efficiently.It iterates through the rows of the DataFrame using iterrows(), which is not the most efficient for large DataFrames but is reasonable for moderate-sized datasets. The use of pd.concat is efficient for combining DataFrames, and it uses ignore_index=True to reset the index in the final concatenated DataFrame.
 
-Scalability:
-        The code is designed to handle multiple CSV files efficiently and concatenate the results into a single DataFrame, making it scalable for thousands of video annotation files.
+3. Scalability:
+   
+The code is designed to handle multiple CSV files efficiently and concatenate the results into a single DataFrame, making it scalable for thousands of video annotation files.
 
 
 # Design Decisions
