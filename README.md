@@ -21,11 +21,19 @@ How to Run
 
 The code is organized into several modular functions to enhance readability and maintainability. Key functions include:
 
-    load_csv_data:- Loads annotations from a CSV file into a DataFrame.
+    load_csv_data:- Loads annotations from a CSV file into a DataFrame.This function takes a CSV file path as input and uses Pandas to read the CSV into a DataFrame(annotations_df).
     process_row_data:- Processes a single row of the annotations DataFrame.
-    process_annotations:- Processes the entire annotations DataFrame.
-    process_all_annotation_data:- Processes all annotation files in a specified directory.
+    process_annotations:- Processes the entire annotations DataFrame.It iterates through each row of the DataFrame, extracts relevant information (video, start_frame, end_frame, phase, tag).It then generates a new DataFrame (processed_df) where each row corresponds to a (video, frame) tuple, with columns video, frame, phase, and tag.The frames between start_frame and end_frame (inclusive) are expanded into separate rows in the processed_df.
+    process_all_annotation_data:- Processes all annotation files in a specified directory.It retrieves a list of all CSV files in the directory.For each file it loads the annotations, processes them using process_annotations, and appends the result to a list (all_dfs) and then it concatenates all DataFrames in the list into a single DataFrame (result_df) using pd.concat and the result DataFrame is returned.
     main:- Orchestrates the entire pipeline.
+
+
+Efficiency Considerations:
+        The code uses Pandas, a powerful library for handling large datasets efficiently.It iterates through the rows of the DataFrame using iterrows(), which is not the most efficient for large DataFrames but is reasonable for moderate-sized datasets. The use of pd.concat is efficient for combining DataFrames, and it uses ignore_index=True to reset the index in the final concatenated DataFrame.
+
+Scalability:
+        The code is designed to handle multiple CSV files efficiently and concatenate the results into a single DataFrame, making it scalable for thousands of video annotation files.
+
 
 # Design Decisions
 
